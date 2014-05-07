@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/Users/devinelder/Desktop/Java1 Project1/.metadata/.plugins/org.eclipse.jdt.core
+2500799666.index
+2277445312.index
+2225968639.index
