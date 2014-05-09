@@ -9,10 +9,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.os.Build;
 
 public class MainActivity extends Activity {
 
+	EditText numInput;
+    TextView byteDisplay;
+    TextView kByteDisplay;
+    TextView mByteDisplay;
+    Button calcButton;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +32,29 @@ public class MainActivity extends Activity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        
+        numInput = (EditText)findViewById(R.id.numInput);
+        byteDisplay = (TextView)findViewById(R.id.byteView);
+        kByteDisplay = (TextView)findViewById(R.id.kByteView);
+        mByteDisplay = (TextView)findViewById(R.id.mByteView);
+        calcButton = (Button)findViewById(R.id.calculateBtn);
+        final String textValue = (numInput.getText().toString());
+        calcButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				boolean emptyField;
+				if (textValue.length() > 0) {
+					emptyField = false;
+				} else {
+					emptyField = true;
+				}
+				if (emptyField = false) {
+					
+				}
+			}
+		});
     }
 
 
