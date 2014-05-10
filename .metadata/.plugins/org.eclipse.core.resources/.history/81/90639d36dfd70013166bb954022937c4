@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <integer name="byte_conversion">1073741824</integer>
+    <integer name="kb_conversion">1048576</integer>
+    <integer name="mb_conversion">1024</integer>
+    <integer-array name="conversion_Data"></integer-array>
+    
+</resources>

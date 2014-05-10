@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <integer name="byte_conversion">1073741824</integer>
+    <integer name="kb_conversion">1048576</integer>
+    <integer name="mb_conversion">1024</integer>
+    <integer-array name="conversion_data">
+        <item >1073741824</item>
+        <item >1048576</item>
+        <item >1024</item>
+    </integer-array>
+    
+</resources>

@@ -1,13 +1,20 @@
+// Devin "Lauren" Elder
+// Java 1 Week 1 Project
+
 package com.elderDevin.linearlayoutproject;
 
+import android.R.bool;
 import android.app.Activity;
 import android.app.ActionBar;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,13 +22,16 @@ import android.widget.TextView;
 import android.os.Build;
 
 public class MainActivity extends Activity {
-
+	
+	// Element Inits and Global Variables
+	
 	EditText numInput;
     TextView byteDisplay;
     TextView kByteDisplay;
     TextView mByteDisplay;
     Button calcButton;
-	
+    boolean emptyField;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,31 +42,7 @@ public class MainActivity extends Activity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
-        
-        numInput = (EditText)findViewById(R.id.numInput);
-        byteDisplay = (TextView)findViewById(R.id.byteView);
-        kByteDisplay = (TextView)findViewById(R.id.kByteView);
-        mByteDisplay = (TextView)findViewById(R.id.mByteView);
-        calcButton = (Button)findViewById(R.id.calculateBtn);
-        final String textValue = (numInput.getText().toString());
-        calcButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				boolean emptyField;
-				if (textValue.length() > 0) {
-					emptyField = false;
-				} else {
-					emptyField = true;
-				}
-				if (emptyField = false) {
-					
-				}
-			}
-		});
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -93,5 +79,53 @@ public class MainActivity extends Activity {
             return rootView;
         }
     }
-
+    
+    // Calculation and Set Text Function
+    
+    public void calculate (int gigValue, int bValue, int kValue, int mValue) {
+    	byteDisplay = (TextView)findViewById(R.id.byteView);
+        kByteDisplay = (TextView)findViewById(R.id.kByteView);
+        mByteDisplay = (TextView)findViewById(R.id.mByteView);
+    	for(int i = 0; i < 4; i++) {
+    		if(i == 1) {
+    			int modifiedValue = gigValue * bValue;
+    			byteDisplay.setText("Bytes: " + modifiedValue);
+    		}
+    		if(i == 2) {
+    			int modifiedValue = gigValue * kValue;
+    			kByteDisplay.setText("Kilobytes: " + modifiedValue);
+    		}
+			if(i == 3) {
+				int modifiedValue = gigValue * mValue;
+				mByteDisplay.setText("Megabytes: " + modifiedValue);
+			}
+    	}
+    };
+    
+    // Onclick Function
+    
+    public void Clicked (View v) {
+    	numInput = (EditText)findViewById(R.id.numInput);
+    	byteDisplay = (TextView)findViewById(R.id.byteView);
+        kByteDisplay = (TextView)findViewById(R.id.kByteView);
+        mByteDisplay = (TextView)findViewById(R.id.mByteView);
+    	String textValue = (numInput.getText().toString());
+    	String textTrimmed = textValue.trim();
+		// TODO Auto-generated method stub
+		if (textTrimmed.isEmpty() || textTrimmed.length() == 0 || textTrimmed.equals("") || textTrimmed == null) {
+			emptyField  = true;
+		} else {
+			emptyField = false;
+		}
+		if (emptyField == false) {
+			int numValue = Integer.parseInt(numInput.getText().toString());
+			int byteValue = getResources().getInteger(R.integer.byte_conversion);
+			int kByteValue = getResources().getInteger(R.integer.kb_conversion);
+			int mByteValue = getResources().getInteger(R.integer.mb_conversion);
+			
+			calculate (numValue, byteValue, kByteValue, mByteValue);
+		}
+    }
 }
+
+

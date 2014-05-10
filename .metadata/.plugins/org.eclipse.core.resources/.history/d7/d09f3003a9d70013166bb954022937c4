@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <int name="byte_conversion">1073741824</int>
+    <int name="kb_conversion">1048576</int>
+    <int name="mb_conversion">1024</int>
+    
+</resources>

@@ -1,0 +1,13 @@
+<!-- Devin "Lauren" Elder -->
+<!-- Java 1 Week 1 Project -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Linear Layout Project</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="textfield_title">Number of Gigabytes:</string>
+    <string name="button_text">Calculate</string>
+
+</resources>

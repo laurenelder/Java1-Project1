@@ -8,6 +8,9 @@
 package com.elderDevin.linearlayoutproject;
 
 public final class R {
+    public static final class array {
+        public static final int conversion_data=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -25,29 +28,34 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080008;
-        public static final int byteView=0x7f080004;
-        public static final int calculateBtn=0x7f080003;
-        public static final int container=0x7f080000;
-        public static final int kByteView=0x7f080005;
-        public static final int mByteView=0x7f080006;
-        public static final int numInput=0x7f080002;
-        public static final int tByteView=0x7f080007;
-        public static final int textView1=0x7f080001;
+        public static final int action_settings=0x7f0a0008;
+        public static final int byteView=0x7f0a0005;
+        public static final int calculateBtn=0x7f0a0004;
+        public static final int container=0x7f0a0000;
+        public static final int kByteView=0x7f0a0006;
+        public static final int linear=0x7f0a0001;
+        public static final int mByteView=0x7f0a0007;
+        public static final int numInput=0x7f0a0003;
+        public static final int textView1=0x7f0a0002;
+    }
+    public static final class integer {
+        public static final int byte_conversion=0x7f050000;
+        public static final int kb_conversion=0x7f050001;
+        public static final int mb_conversion=0x7f050002;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int fragment_main=0x7f030001;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050002;
-        public static final int app_name=0x7f050000;
-        public static final int button_text=0x7f050004;
-        public static final int hello_world=0x7f050001;
-        public static final int textfield_title=0x7f050003;
+        public static final int action_settings=0x7f070002;
+        public static final int app_name=0x7f070000;
+        public static final int button_text=0x7f070004;
+        public static final int hello_world=0x7f070001;
+        public static final int textfield_title=0x7f070003;
     }
     public static final class style {
         /** 
@@ -71,10 +79,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f080000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f080001;
     }
 }
